@@ -5,7 +5,7 @@ Is it broken? No. :-) Since this code integrates with Azure Active Directory, it
 ## Introduction 
 This repo contains a sample to show delegated management of group memberships for users in Azure Active Directory. Or more conceptually it shows API operations that are performed on behalf of the user and operations that are performed by the application.
 
-This code is a not a fully working solution to be used in production. It just shows the relevant APIs in my scenario, see below. And the majority of code is reused from the references, see further below.
+This code is a not a fully working solution to be used in production. It just shows the relevant APIs in my scenario, see below. And the majority of code is reused from the references, see further below. Use a vault to store secrets.
 
 ## Scenario
 This concept can be used by organizations that have their own Azure Active Directory and want to invite AAD users from 3rd party companies (tenants) and have those companies manage group membership for their users.
