@@ -1,0 +1,34 @@
+﻿@using Newtonsoft.Json.Linq
+@{
+    ViewData["Title"] = "Manage users";
+}
+<h2>@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3>
+
+<table class="table table-striped table-condensed" style="font-family: monospace">
+    <tr>
+        <th>Property</th>
+        <th>Value</th>
+    </tr>
+    @{
+        // TODO:
+        // AUTHORIZATION
+        // List all tenant's users
+        // * Select user -> view memberships -> Add/remove group
+        // * Logging/auditing?
+
+        if (ViewData["members"] != null)
+        {
+            var members = (System.Collections.Generic.SortedDictionary<string, string>)ViewData["members"];
+
+            foreach (KeyValuePair<string, string> kvp in members)
+            {
+                <tr>
+                    <td> @kvp.Key </td>
+                    <td> @kvp.Value </td>
+                </tr>
+            }
+        }
+    }
+</table>
+

@@ -1,0 +1,36 @@
+﻿@using Newtonsoft.Json.Linq
+@{
+    ViewData["Title"] = "Manage groups";
+}
+<h2>@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3>
+
+<table class="table table-striped table-condensed" style="font-family: monospace">
+    <tr>
+        <th>Property</th>
+        <th>Value</th>
+    </tr>
+    @{
+        // TODO:
+        // AUTHORIZATION
+        // List all tenant's groups
+        // * Select group -> view members -> Add/remove member
+        // * Logging/auditing?
+
+        if (ViewData["transitivegroups"] != null)
+        {
+            var transitivegroups = (System.Collections.Generic.SortedDictionary<string, string>)ViewData["transitivegroups"];
+
+            foreach (KeyValuePair<string, string> kvp in transitivegroups)
+            {
+            <tr>
+                <td> @kvp.Key </td>
+                <td> @kvp.Value </td>
+            </tr>
+            }
+        } 
+    }
+</table>
+
+@Html.ActionLink("Add", "Add", "Membership")
+@Html.ActionLink("Delete", "Delete", "Membership")
