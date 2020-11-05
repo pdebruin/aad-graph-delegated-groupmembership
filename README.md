@@ -1,4 +1,4 @@
-# Delegated group membership
+# Delegated management of group membership 
 
 Is it broken? No. :-) Since this code integrates with Azure Active Directory, it needs some configuration to get going. The build errors are on purpose to draw your attention to those locations.
 
